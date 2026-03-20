@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Nexo Tienda</title>
-<link rel="stylesheet" href="css/styles.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <meta charset="UTF-8">
+  <title>Nexo Tienda</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Nexo Logo">
+      <h1>Nexo Tienda</h1>
+    </div>
+    <div>
+      <select id="categoryFilter">
+        <option value="all">Todas las categorías</option>
+      </select>
+      <button onclick="logout()">Cerrar sesión</button>
+    </div>
+  </header>
 
-<header class="header">
-  <div class="header-left">
-    <img src="logo.png" class="logo">
-    <span class="eslogan">Tu tienda online</span>
-  </div>
+  <main id="productContainer">
+    <!-- Aquí se renderizan las tarjetas de productos -->
+  </main>
 
-  <button class="menu-hamburguesa" onclick="toggleMenu()">☰</button>
-
-  <nav class="menu-desplegable" id="menu">
-    <ul id="menu-categorias"></ul>
-  </nav>
-</header>
-
-<main class="contenido">
-  <div id="productos-container"></div>
-</main>
-
-<script src="js/supabase.js"></script>
-<script src="js/app.js"></script>
-<script src="js/productos.js"></script>
-
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
