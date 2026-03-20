@@ -1,3 +1,8 @@
+// Verificar sesión
+const user = supabase.auth.getUser();
+if (!user) {
+  window.location.href = "login.html";
+}
 async function agregarProducto() {
   const nombre = document.getElementById("nombre").value;
   const descripcion = document.getElementById("descripcion").value;
