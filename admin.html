@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Admin Nexo</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <meta charset="UTF-8">
+  <title>Admin Nexo Tienda</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-
 <body>
+  <header>
+    <div class="logo">
+      <img src="../assets/logo.png" alt="Nexo Logo">
+      <h1>Panel Admin</h1>
+    </div>
+    <button onclick="logout()">Cerrar sesión</button>
+  </header>
 
-<h2>Panel Administrador</h2>
+  <section id="addProduct">
+    <h2>Agregar Producto</h2>
+    <input id="name" placeholder="Nombre">
+    <input id="desc" placeholder="Descripción">
+    <input id="price" type="number" placeholder="Precio">
+    <input id="category" placeholder="Categoría">
+    <input id="image" placeholder="URL Imagen">
+    <input id="whatsapp" placeholder="WhatsApp">
+    <button onclick="addProduct()">Agregar Producto</button>
+  </section>
 
-<input id="nombre" placeholder="Nombre">
-<input id="descripcion" placeholder="Descripción">
-<input id="precio" placeholder="Precio">
-<input id="imagen" placeholder="URL Imagen">
-<input id="categoria" placeholder="Categoría">
+  <section id="adminProductContainer">
+    <!-- Aquí se renderizan los productos con editar/eliminar -->
+  </section>
 
-<button onclick="agregarProducto()">Guardar</button>
-
-<hr>
-
-<h3>Productos existentes</h3>
-<div id="lista-productos"></div>
-
-<script src="js/supabase.js"></script>
-<script src="js/admin.js"></script>
-
+  <script src="../js/supabase.js"></script>
+  <script src="../js/admin.js"></script>
+  <script src="../js/auth.js"></script>
 </body>
 </html>
