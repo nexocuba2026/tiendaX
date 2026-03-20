@@ -117,3 +117,11 @@ async function deleteProduct(id) {
 // Inicialización
 checkAdminSession();
 loadAdminProducts();
+<div id="adminProductContainer"></div>
+<input id="name" placeholder="Nombre">
+<input id="desc" placeholder="Descripción">
+<input id="price" type="number" placeholder="Precio">
+<input id="category" placeholder="Categoría">
+<input id="image" placeholder="URL Imagen">
+<input id="whatsapp" placeholder="WhatsApp">
+<button onclick="addProduct()">Agregar Producto</button>
